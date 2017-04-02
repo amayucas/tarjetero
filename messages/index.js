@@ -53,7 +53,7 @@ function getCardsAttachments(session) {
                 builder.CardImage.create(session, 'https://azurecomcdn.azureedge.net/cvt-5daae9212bb433ad0510fbfbff44121ac7c759adc284d7a43d60dbbf2358a07a/images/page/services/functions/01-develop.png')
             ])
             .buttons([
-                builder.CardAction.postBack(session,'Selecciona una opcion: ',[Opcion 1,Opcion 2,Opcion 3]);
+                builder.CardAction.postBack(session,'Selecciona una opcion: ',[Opcion1,Opcion2,Opcion3])
             ]),
 
         new builder.ThumbnailCard(session)
