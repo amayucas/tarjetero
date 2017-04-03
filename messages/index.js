@@ -71,8 +71,7 @@ function getCardsAttachments(session) {
     ];
 }
 bot.dialog('/question',function (session) {
-        builder.Prompts.choice(session,"¿Puedo hacerte algunas preguntas?(S/N)",
-            ['Si','No']);
+        session.send('Funciona');
     
 });
 bot.dialog('/question2',function (session) {
