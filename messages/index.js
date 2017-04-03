@@ -31,7 +31,9 @@ function getCardsAttachments(session) {
                 builder.CardImage.create(session, 'https://docs.microsoft.com/en-us/azure/storage/media/storage-introduction/storage-concepts.png')
             ])
             .buttons([
-                builder.CardAction.openUrl(session, 'https://azure.microsoft.com/en-us/services/storage/', 'Learn More')
+                builder.CardAction.dialogAction(session,'/question','Si','Si'),
+                builder.CardAction.dialogAction(session,'/question2','No','No'),
+                builder.CardAction.dialogAction(session,'/question3','Puede','Puede')
             ]),
 
         new builder.ThumbnailCard(session)
@@ -68,6 +70,20 @@ function getCardsAttachments(session) {
             ])
     ];
 }
+bot.dialog('/question',function (session) {
+        builder.Prompts.choice(session,"¿Puedo hacerte algunas preguntas?(S/N)",
+            ['Si','No']);
+    
+});
+bot.dialog('/question2',function (session) {
+        builder.Prompts.choice(session,"¿Puedo hacerte algunas preguntas?(S/N)",
+            ['Si','No']);
+});
+bot.dialog('/question3',function (session) {
+        builder.Prompts.choice(session,"¿Puedo hacerte algunas preguntas?(S/N)",
+            ['Si','No']);
+    
+});
 if (useEmulator) {
     var restify = require('restify');
     var server = restify.createServer();
