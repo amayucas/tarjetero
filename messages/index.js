@@ -55,7 +55,7 @@ function getCardsAttachments(session) {
                 builder.CardImage.create(session, 'https://azurecomcdn.azureedge.net/cvt-5daae9212bb433ad0510fbfbff44121ac7c759adc284d7a43d60dbbf2358a07a/images/page/services/functions/01-develop.png')
             ])
             .buttons([
-                builder.Prompts.choice(session,'Selecciona una opcion',[A,B,C,D])
+                builder.CardAction.openUrl(session, 'https://azure.microsoft.com/en-us/services/cognitive-services/', 'Learn More')
             ]),
 
         new builder.ThumbnailCard(session)
