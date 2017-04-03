@@ -31,9 +31,9 @@ function getCardsAttachments(session) {
                 builder.CardImage.create(session, 'https://docs.microsoft.com/en-us/azure/storage/media/storage-introduction/storage-concepts.png')
             ])
             .buttons([
-                builder.CardAction.dialogAction(session,'/question',,'Si'),
-                builder.CardAction.dialogAction(session,'/question2',,'No'),
-                builder.CardAction.dialogAction(session,'/question3',,'Puede')
+                builder.CardAction.dialogAction(session,'/question'),
+                builder.CardAction.dialogAction(session,'/question2'),
+                builder.CardAction.dialogAction(session,'/question3')
             ]),
 
         new builder.ThumbnailCard(session)
